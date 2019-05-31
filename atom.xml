@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://StevenSyu.github.io</id>
     <title>雪泥鴻爪</title>
-    <updated>2019-05-31T09:39:00.519Z</updated>
+    <updated>2019-05-31T09:40:24.166Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://StevenSyu.github.io"/>
     <link rel="self" href="https://StevenSyu.github.io/atom.xml"/>
@@ -10,13 +10,6 @@
     <logo>https://StevenSyu.github.io/images/avatar.png</logo>
     <icon>https://StevenSyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 雪泥鴻爪</rights>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>https://StevenSyu.github.io/post/AGb2V31U4</id>
-        <link href="https://StevenSyu.github.io/post/AGb2V31U4">
-        </link>
-        <updated>2019-05-31T09:24:01.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[hello world!]]></title>
         <id>https://StevenSyu.github.io/post/hello</id>
