@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>test | 雪泥鴻爪</title>
+<meta name="description" content="人生到處知何似 應似飛鴻踏雪泥">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://StevenSyu.github.io/favicon.ico?v=1559295450760">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://StevenSyu.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://StevenSyu.github.io">
+        <img src="https://StevenSyu.github.io/images/avatar.png?v=1559295450760" class="site-logo">
+        <h1 class="site-title">雪泥鴻爪</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首頁
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            歸檔
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            標籤
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            關於
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      人生到處知何似 應似飛鴻踏雪泥
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://StevenSyu.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">test</h2>
+            <div class="post-date">2019/05/31</div>
+            
+            <div class="post-content">
+              <p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#api-%E5%88%97%E8%A1%A8">API 列表</a>
+<ul>
+<li><a href="#androidrsacrypto">AndroidRSACrypto</a></li>
+<li><a href="#androidrsacryptoimpl">AndroidRSACryptoImpl</a>
+<ul>
+<li><a href="#constructor-%E8%A9%B3%E6%83%85">Constructor 詳情</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#api-%E8%A9%B3%E6%83%85">API 詳情</a>
+<ul>
+<li><a href="#generatekeypair">generateKeyPair</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E">說明</a></li>
+<li><a href="#api">API</a></li>
+</ul>
+</li>
+<li><a href="#generatep10">generateP10</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-2">說明</a></li>
+<li><a href="#api-2">API</a></li>
+</ul>
+</li>
+<li><a href="#getcertificate">getCertificate</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-3">說明</a></li>
+<li><a href="#api-3">API</a></li>
+</ul>
+</li>
+<li><a href="#importcertificate">importCertificate</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-4">說明</a></li>
+<li><a href="#api-4">API</a></li>
+</ul>
+</li>
+<li><a href="#readp7signedcontent">readP7SignedContent</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-5">說明</a></li>
+<li><a href="#api-5">API</a></li>
+</ul>
+</li>
+<li><a href="#signp1data">signP1Data</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-6">說明</a></li>
+<li><a href="#api-6">API</a></li>
+</ul>
+</li>
+<li><a href="#signp7data">signP7Data</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-7">說明</a></li>
+<li><a href="#api-7">API</a></li>
+</ul>
+</li>
+<li><a href="#verifyp1signature">verifyP1Signature</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-8">說明</a></li>
+<li><a href="#api-8">API</a></li>
+</ul>
+</li>
+<li><a href="#verifyp7data">verifyP7Data</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-9">說明</a></li>
+</ul>
+</li>
+<li><a href="#verifyp7datadigest">verifyP7DataDigest</a>
+<ul>
+<li><a href="#%E8%AA%AA%E6%98%8E-10">說明</a></li>
+<li><a href="#api-9">API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<blockquote>
+<p>block test</p>
+</blockquote>
+<p>此頁面列出之API內容，為Clint端的運算及處理行為，不涉及任何Server及網路服務。</p>
+<h2 id="api-列表">API 列表</h2>
+<h3 id="androidrsacrypto">AndroidRSACrypto</h3>
+<p><strong>Packages:</strong> com.jrsys.crypto.library</p>
+<p>以Android Keystore 為基礎的 RSA 金鑰/憑證管理，以及 RSA 簽/驗章服務（支援 PKCS#1 及 PKCS#7 ）。</p>
+<table>
+<thead>
+<tr>
+<th>Return Type</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>generateKeyPair()</td>
+<td>使用 Android Keystore 產生一對 2048bit RSA 金鑰。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>generateKeyPair(String keyAlias)</td>
+<td>使用 Android Keystore 產生一對 2048bit RSA 金鑰。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>generateP10(String subjectDn, String email)</td>
+<td>產生憑證請求檔（CSR）。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>generateP10(String subjectDn, String email, String keyAlias)</td>
+<td>產生憑證請求檔（CSR）。</td>
+</tr>
+<tr>
+<td>X509Certificate</td>
+<td>getCertificate()</td>
+<td>從Android Keystore 內取得憑證。</td>
+</tr>
+<tr>
+<td>X509Certificate</td>
+<td>getCertificate(String keyAlias)</td>
+<td>從Android Keystore 內取得憑證。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>importCertificate(byte[] certData)</td>
+<td>匯入憑證至 Android Keystore。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>importCertificate(byte[] certData, String keyAlias)</td>
+<td>匯入憑證至 Android Keystore。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>importCertificate(InputStream certInputStream)</td>
+<td>匯入憑證至 Android Keystore。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>importCertificate(InputStream certInputStream, String keyAlias)</td>
+<td>匯入憑證至 Android Keystore。</td>
+</tr>
+<tr>
+<td>ByteArrayOutputStream</td>
+<td>readP7SignedContent(byte[] p7Data)</td>
+<td>讀取PKCS#7簽章內的 signed content。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>signP1Data(byte[] toBeSign)</td>
+<td>使用預設金鑰簽署出 PKCS#1 格式的數位簽章。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>signP1Data(byte[] toBeSign, String digestAlgorithm)</td>
+<td>使用預設金鑰簽署出 PKCS#1 格式的數位簽章。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>signP1Data(byte[] toBeSign, String digestAlgorithm, String keyAlias)</td>
+<td>簽署出 PKCS#1 格式的數位簽章。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>signP7Data(byte[] toBeSign)</td>
+<td>使用預設金鑰簽署出 PKCS#7 格式的數位簽章。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>signP7Data(byte[] toBeSign, String digestAlgorithm)</td>
+<td>使用預設金鑰簽署出 PKCS#7 格式的數位簽章。</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>signP7Data(byte[] toBeSign, String digestAlgorithm, String keyAlias)</td>
+<td>使用預設金鑰簽署出 PKCS#7 格式的數位簽章。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP1Signature(byte[] toBeSign, byte[] signature)</td>
+<td>驗證 PKCS#1 簽章的正確性。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP1Signature(byte[] toBeSign, byte[] signature, String digestAlgorithm)</td>
+<td>驗證 PKCS#1 簽章的正確性。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP1Signature(byte[] toBeSign, byte[] signature, String digestAlgorithm,</td>
+<td>String keyAlias)</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP1Signature(byte[] toBeSign, byte[] signature, String digestAlgorithm,</td>
+<td>X509Certificate certificate)</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP1Signature(byte[] toBeSign, byte[] signature, X509Certificate certificate)</td>
+<td>驗證 PKCS#1 簽章的正確性。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP7Data(byte[] p7Data)</td>
+<td>驗證 PKCS#7 簽章的正確性。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>verifyP7DataDigest(byte[] p7Data, byte[] digestData)</td>
+<td>驗證PKCS#7簽章內的signed content 的 digest，是否與傳入的 digest 一致。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="androidrsacryptoimpl">AndroidRSACryptoImpl</h3>
+<p><strong>Packages:</strong> com.jrsys.crypto.library</p>
+<p>實作 AndroidRSACrypto 介面的class.</p>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AndroidRSACryptoImpl(Context context, String license)</td>
+<td>建構 AndroidRSACryptoImpl</td>
+</tr>
+<tr>
+<td>AndroidRSACryptoImpl(Context context, String license, String keyAlias)</td>
+<td>建構AndroidRSACryptoImpl</td>
+</tr>
+</tbody>
+</table>
+<h4 id="constructor-詳情">Constructor 詳情</h4>
+<pre><code class="language-java">public AndroidRSACryptoImpl(Context context,String license)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>context - Android 的Context。</li>
+<li>license - 放置於 Android asset 資料夾內的license file名稱。</li>
+</ul>
+<pre><code class="language-java">public AndroidRSACryptoImpl(Context context,String license,String keyAlias)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>context - Android 的Context。</li>
+<li>license - 放置於 Android asset 資料夾內的license file名稱。</li>
+<li>keyAlias - 此Instance預設的金鑰alias 名稱。</li>
+</ul>
+<h2 id="api-詳情">API 詳情</h2>
+<h3 id="generatekeypair">generateKeyPair</h3>
+<h4 id="說明">說明</h4>
+<p>使用 Android Keystore 產生一對 2048bit RSA 金鑰。</p>
+<h4 id="api">API</h4>
+<pre><code class="language-java"> void generateKeyPair() throws Exception
+
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<p>void</p>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<pre><code class="language-java"> void generateKeyPair(String keyAlias) throws Exception
+
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>keyAlias - 金鑰的 alias。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<h3 id="generatep10">generateP10</h3>
+<h4 id="說明-2">說明</h4>
+<p>產生憑證請求檔（CSR）。</p>
+<h4 id="api-2">API</h4>
+<pre><code class="language-java">byte[] generateP10(String subjectDn,String email) throws InvalidKeyException,NoSuchAlgorithmException, 
+        NoSuchProviderException,SignatureException,com.jrsys.mpki.MCryptoException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>subjectDn - 憑證的 Subject DN 資訊。</li>
+<li>email - 憑證內的 email 資訊。</li>
+</ul>
+<p><strong>Returns:</strong> 憑證請求檔（CSR）</p>
+<pre><code class="language-java">byte[] generateP10(String subjectDn,String email,String keyAlias) throws InvalidKeyException,NoSuchAlgorithmException,
+        NoSuchProviderException,SignatureException,com.jrsys.mpki.MCryptoException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>subjectDn - 憑證的 Subject DN 資訊。</li>
+<li>email - 憑證內的 email 資訊。</li>
+<li>keyAlias - 產生此 CSR 所使用的金鑰 alias。</li>
+</ul>
+<p><strong>Returns:</strong> 憑證請求檔（CSR）</p>
+<h3 id="getcertificate">getCertificate</h3>
+<h4 id="說明-3">說明</h4>
+<p>從Android Keystore 內取得憑證。</p>
+<h4 id="api-3">API</h4>
+<pre><code class="language-java">X509Certificate getCertificate() throws com.jrsys.mpki.MCryptoException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<p>void</p>
+<p><strong>Returns:</strong></p>
+<p>X509規格的憑證資料。</p>
+<pre><code class="language-java">X509Certificate getCertificate(String keyAlias) throws com.jrsys.mpki.MCryptoException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>keyAlias - 對應憑證的金鑰的 alias。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>X509規格的憑證資料。</p>
+<h3 id="importcertificate">importCertificate</h3>
+<h4 id="說明-4">說明</h4>
+<p>匯入憑證至 Android Keystore。</p>
+<h4 id="api-4">API</h4>
+<pre><code class="language-java">void importCertificate(byte[] certData) throws com.jrsys.mpki.MCryptoException,CertificateException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>certData - 憑證資料。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<pre><code class="language-java">void importCertificate(byte[] certData,String keyAlias) throws com.jrsys.mpki.MCryptoException,
+        CertificateException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>certData - 憑證資料。</li>
+<li>keyAlias - 對應憑證的金鑰的 alias。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<pre><code class="language-java">void importCertificate(InputStream certInputStream) throws com.jrsys.mpki.MCryptoException,
+        CertificateException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>certInputStream - 憑證資料的串流。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<pre><code class="language-java">void importCertificate(InputStream certInputStream,String keyAlias) throws com.jrsys.mpki.MCryptoException,
+        CertificateException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>certInputStream - 憑證資料的串流。</li>
+<li>keyAlias - 對應憑證的金鑰的 alias。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void</p>
+<h3 id="readp7signedcontent">readP7SignedContent</h3>
+<h4 id="說明-5">說明</h4>
+<p>讀取PKCS#7簽章內的 signed content。</p>
+<h4 id="api-5">API</h4>
+<pre><code class="language-java">ByteArrayOutputStream readP7SignedContent(byte[] p7Data)throws com.jrsys.bouncycastle.cms.CMSException,
+        IOException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>p7Data - PKCS#7 資料。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>signed content</p>
+<h3 id="signp1data">signP1Data</h3>
+<h4 id="說明-6">說明</h4>
+<p>使用預設金鑰簽署出 PKCS#1 格式的數位簽章。</p>
+<h4 id="api-6">API</h4>
+<pre><code class="language-java">byte[] signP1Data(byte[] toBeSign) throws Exception
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 需要被簽章的資料。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>PKCS#1 格式的簽章值。</p>
+<pre><code class="language-java">byte[] signP1Data(byte[] toBeSign,String digestAlgorithm) throws Exception
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 需要被簽章的資料。</li>
+<li>digestAlgorithm - 簽章時所使用的 digest algorithm</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>PKCS#1 格式的簽章值。</p>
+<pre><code class="language-java">byte[] signP1Data(byte[] toBeSign, String digestAlgorithm,String keyAlias) throws Exception
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<p>toBeSign - 需要被簽章的資料。
+digestAlgorithm - 簽章時所使用的 digest algorithm
+keyAlias - 簽署 PKCS#1 簽章所需使用的金鑰 alias</p>
+<p><strong>Returns:</strong></p>
+<p>PKCS#1 格式的簽章值。</p>
+<h3 id="signp7data">signP7Data</h3>
+<h4 id="說明-7">說明</h4>
+<p>使用預設金鑰簽署出 PKCS#7 格式的數位簽章。</p>
+<h4 id="api-7">API</h4>
+<pre><code class="language-java">byte[] signP7Data(byte[] toBeSign)throws Exception
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 需要被簽章的資料。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>PKCS#7 格式的簽章值。</p>
+<pre><code class="language-java">byte[] signP7Data(byte[] toBeSign,String digestAlgorithm)throws Exception
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 需要被簽章的資料。</li>
+<li>digestAlgorithm - 簽章時所使用的 digest algorithm</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>PKCS#7 格式的簽章值。</p>
+<pre><code class="language-java">byte[] signP7Data(byte[] toBeSign,String digestAlgorithm,String keyAlias)throws Exception
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 需要被簽章的資料。</li>
+<li>digestAlgorithm - 簽章時所使用的 digest algorithm</li>
+<li>keyAlias - 簽署 PKCS#7 簽章所需使用的金鑰 alias</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>PKCS#7 格式的簽章值。</p>
+<h3 id="verifyp1signature">verifyP1Signature</h3>
+<h4 id="說明-8">說明</h4>
+<p>驗證 PKCS#1 簽章的正確性</p>
+<h4 id="api-8">API</h4>
+<pre><code class="language-java">boolean verifyP1Signature(byte[] toBeSign,byte[] signature)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 被簽章的資料。</li>
+<li>signature - 簽章值。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+<pre><code class="language-java">boolean verifyP1Signature(byte[] toBeSign,byte[] signature, String digestAlgorith)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 被簽章的資料。</li>
+<li>signature - 簽章值。</li>
+<li>digestAlgorithm - 此簽章值所使用的 digest 演算法。ex:SHA256withRSA.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+<pre><code class="language-java">boolean verifyP1Signature(byte[] toBeSign,byte[] signature, String digestAlgorith,String keyAlias)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 被簽章的資料。</li>
+<li>signature - 簽章值。</li>
+<li>digestAlgorithm - 此簽章值所使用的 digest 演算法。ex:SHA256withRSA.</li>
+<li>keyAlias - 驗證此簽章值所使用的金鑰alias。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+<pre><code class="language-java">boolean verifyP1Signature(byte[] toBeSign,byte[] signature, String digestAlgorith, X509Certificate certificate)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 被簽章的資料。</li>
+<li>signature - 簽章值。</li>
+<li>digestAlgorithm - 此簽章值所使用的 digest 演算法。ex:SHA256withRSA.</li>
+<li>certificate - 驗證此簽章值所使用的憑證。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+<pre><code class="language-java">boolean verifyP1Signature(byte[] toBeSign,byte[] signature, X509Certificate certificate)
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>toBeSign - 被簽章的資料。</li>
+<li>signature - 簽章值。</li>
+<li>certificate - 驗證此簽章值所使用的憑證。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+<h3 id="verifyp7data">verifyP7Data</h3>
+<h4 id="說明-9">說明</h4>
+<p>驗證 PKCS#7 簽章的正確性。但此方法沒有驗證憑證鏈之類的憑證資訊有效性。</p>
+<p>####API</p>
+<pre><code class="language-java">boolean verifyP7Data(byte[] p7Data) throws com.jrsys.bouncycastle.cms.CMSException,NoSuchProviderException,
+        NoSuchAlgorithmException,CertStoreException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>p7Data - PKCS#7 資料。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+<h3 id="verifyp7datadigest">verifyP7DataDigest</h3>
+<h4 id="說明-10">說明</h4>
+<p>驗證PKCS#7簽章內的signed content 的 digest，是否與傳入的 digest 一致。</p>
+<h4 id="api-9">API</h4>
+<pre><code class="language-java">boolean verifyP7DataDigest(byte[] p7Data,byte[] digestData) throws NoSuchAlgorithmException,com.jrsys.bouncycastle.cms.CMSException,
+        NoSuchProviderException,CertStoreException
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>p7Data - PKCS#7 資料。</li>
+<li>digestData - 待驗證的 digest 資料。</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>是否通過驗證。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://StevenSyu.github.io/tag/JCyNBn4PW" class="tag">
+                    雜文
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://StevenSyu.github.io/post/hello">
+                  <h3 class="post-title">
+                    hello world!
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '4df4760629e69316d544',
+        clientSecret: '1f1ee4adddf9e10b6b7d6539862948bc8165dec6',
+        repo: 'StevenSyu.github.io',
+        owner: 'StevenSyu',
+        admin: ['StevenSyu'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
