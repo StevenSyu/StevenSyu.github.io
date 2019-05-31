@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://StevenSyu.github.io</id>
     <title>雪泥鴻爪</title>
-    <updated>2019-05-31T07:53:02.010Z</updated>
+    <updated>2019-05-31T07:57:40.482Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://StevenSyu.github.io"/>
     <link rel="self" href="https://StevenSyu.github.io/atom.xml"/>
@@ -16,11 +16,11 @@
         <link href="https://StevenSyu.github.io/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <summary type="html"><![CDATA[<p>👏歡迎使用** Gridea <strong>！
+✍️</strong> Gridea **一個靜態博客寫作客戶端。你可以用它來記錄你的生活，心情，知識，筆記，創意......</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<p>👏歡迎使用** Gridea <strong>！
+✍️</strong> Gridea **一個靜態博客寫作客戶端。你可以用它來記錄你的生活，心情，知識，筆記，創意......</p>
 ]]></content>
     </entry>
 </feed>
